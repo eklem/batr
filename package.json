@@ -1,7 +1,7 @@
 {
   "name": "batr",
   "version": "0.0.1",
-  "description": "Bundle and test CommonJS + ESM in the browser and NodeJS. And easy setup with Travis-CI.",
+  "description": "Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis-CI.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
