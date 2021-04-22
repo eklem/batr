@@ -1,4 +1,4 @@
-# battr
+# batr
 Bundle and test CommonJS + ESM in NodeJS and the browser. And easy setup with Travis-CI.
 
 ## Background
