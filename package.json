@@ -1,21 +1,28 @@
 {
   "name": "batr",
   "version": "0.0.1",
-  "description": "Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis-CI.",
-  "main": "index.js",
+  "description": "Batr - Bundle and Test CommonJS + ESM in the browser and NodeJS. And repeat with Travis-CI.",
+  "main": "vanderlay-industries.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config",
+    "empty-sandbox": "rm -rf test/sandbox && mkdir test/sandbox",
+    "copy-stopword": "[some copying of stopword demo]",
+    "test": "standard './*.js' './test/*.js' && npm run empty-sandbox && npm run build && tape ./test/test.js && cat test/sandbox/bundle.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eklem/batr.git"
   },
   "dependencies": {
+    "rollup": "^2.45.2",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "rollup": "^2.45.2",
     "tape": "^5.2.2",
-    "playwright": "^1.10.0"
+    "playwright": "^1.10.0",
+    "standard": "^16.0.2"
+  },
+  "devDependencies": {
+    "stopword": "^1.0.7"
   },
   "keywords": [
     "bundling",

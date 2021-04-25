@@ -1,7 +1,9 @@
 // Importer / exporter, but nothing really happening
 
 // Importing
-var test = require('tape')
+const test = require('tape')
+const playwright = require('playwright');
 
 // Exporting
 exports.test = test
+exports.playwright = playwright
