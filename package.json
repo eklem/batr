@@ -2,7 +2,9 @@
   "name": "batr",
   "version": "0.0.1",
   "description": "Batr - Bundle and Test CommonJS + ESM in the browser and NodeJS. And repeat with Travis-CI.",
-  "main": "vanderlay-industries.js",
+  "main": "dist/vanderlay-industries.js",
+  "module": "dist/vanderlay-industries.esm.js",
+  "browser": "dist/vanderlay-industries.umd.js",
   "scripts": {
     "build": "rollup --config",
     "empty-sandbox": "rm -rf test/sandbox && mkdir test/sandbox",
@@ -14,12 +16,13 @@
     "url": "git+https://github.com/eklem/batr.git"
   },
   "dependencies": {
-    "rollup": "^2.45.2",
     "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "tape": "^5.2.2",
     "playwright": "^1.10.0",
-    "standard": "^16.0.2"
+    "rollup": "^2.45.2",
+    "standard": "^16.0.2",
+    "tape": "^5.2.2"
   },
   "devDependencies": {
     "stopword": "^1.0.7"

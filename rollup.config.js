@@ -2,6 +2,7 @@
 
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
 import pkg from './package.json'
 
 export default [
@@ -10,13 +11,14 @@ export default [
   {
     input: './vandelay-industries.js',
     output: {
-      name: 'batr',
+      name: 'batrA',
       file: pkg.browser,
       format: 'umd'
     },
     plugins: [
       resolve(), // so Rollup can find `ms`
-      commonjs() // so Rollup can convert `ms` to an ES module
+      commonjs(), // so Rollup can convert `ms` to an ES module
+      json()
     ]
   },
 
@@ -30,10 +32,9 @@ export default [
   // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
     input: './vandelay-industries.js',
-    external: ['ms'],
     output: [
-      { file: pkg.main, format: 'cjs', dir: '' },
-      { file: pkg.module, format: 'es' }
+      { name: 'batrB', file: pkg.main, format: 'cjs' },
+      { name: 'batrC', file: pkg.module, format: 'es' }
     ]
   }
 ]

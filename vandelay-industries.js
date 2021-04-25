@@ -2,8 +2,8 @@
 
 // Importing
 const test = require('tape')
-const playwright = require('playwright');
+// const playwright = require('playwright')
 
 // Exporting
 exports.test = test
-exports.playwright = playwright
+// exports.playwright = playwright
