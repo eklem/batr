@@ -28,4 +28,3 @@ const { firefox } = require('playwright');
   await context.close()
   await browser.close()
 })()
-
