@@ -10,7 +10,7 @@ Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis
 * As few dependencies as possible, or a good balance between dependencies and function, to not have minor updates all the time.
 
 ## Goal
-Run tests in
+Easy setup of
 * Tape tests in Node.js
 * Tape tests in browser
 * User-like interaction tests in browser
