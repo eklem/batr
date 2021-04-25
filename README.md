@@ -7,3 +7,4 @@ Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis
 ## Background
 * Use less time on updating the same bundle and test framework code in different libraries.
 * Quicker bundling and test setup when creating new libraries.
+* As few dependencies as possible, or a good balance between dependencies and function, to not have minor updates all the time.

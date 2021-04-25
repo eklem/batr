@@ -6,6 +6,7 @@ import pkg from './package.json'
 
 export default [
   // browser-friendly UMD build
+  // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
     input: './vandelay-industries.js',
     output: {
@@ -25,11 +26,13 @@ export default [
   // builds from a single configuration where possible, using
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
+
+  // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
     input: './vandelay-industries.js',
     external: ['ms'],
     output: [
-      { file: pkg.main, format: 'cjs' },
+      { file: pkg.main, format: 'cjs', dir: '' },
       { file: pkg.module, format: 'es' }
     ]
   }
