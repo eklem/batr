@@ -9,9 +9,9 @@ export default [
   // browser-friendly UMD build
   // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
-    input: './vandelay-industries.js',
+    input: './node_modules/stopword/lib/stopword.js',
     output: {
-      name: 'batrA',
+      name: 'sw',
       file: pkg.browser,
       format: 'umd'
     },
@@ -31,10 +31,10 @@ export default [
 
   // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
-    input: './vandelay-industries.js',
+    input: './node_modules/stopword/lib/stopword.js',
     output: [
-      { name: 'batrB', file: pkg.main, format: 'cjs' },
-      { name: 'batrC', file: pkg.module, format: 'es' }
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' }
     ]
   }
 ]

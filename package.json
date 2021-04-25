@@ -2,14 +2,15 @@
   "name": "batr",
   "version": "0.0.1",
   "description": "Batr - Bundle and Test CommonJS + ESM in the browser and NodeJS. And repeat with Travis-CI.",
-  "main": "dist/vanderlay-industries.js",
-  "module": "dist/vanderlay-industries.esm.js",
-  "browser": "dist/vanderlay-industries.umd.js",
+  "main": "dist/stopword.cjs.js",
+  "module": "dist/stopword.esm.js",
+  "browser": "dist/stopword.js",
   "scripts": {
     "build": "rollup --config",
     "empty-sandbox": "rm -rf test/sandbox && mkdir test/sandbox",
-    "copy-stopword": "[some copying of stopword demo]",
-    "test": "standard './*.js' './test/*.js' && npm run empty-sandbox && npm run build && tape ./test/test.js && cat test/sandbox/bundle.js"
+    "empty-demo": "rm -rf demo/",
+    "copy-stopword": "cp -r ./node_modules/stopword/demo ./",
+    "test": "npm run empty-sandbox && standard './*.js' './test/*.js' && npm run copy-stopword && npm run build && tape ./test/test.js"
   },
   "repository": {
     "type": "git",
