@@ -11,7 +11,7 @@ Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis
 * Less noise from Dependabot.
 
 ### Easy setup of
-* Tape tests in Node.js
-* Tape tests in browser
-* User-like interaction tests in browser
+* Ava tests in Node.js
+* Possibly duplicat Ava tests in browser
+* User-like interaction tests in browser, supported by Ava
 * Bundling & building for the browser, CommonJS and ESM
