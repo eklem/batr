@@ -1,5 +1,5 @@
 # batr
-Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis-CI.
+**B**undle **a**nd **t**est CommonJS + ESM in NodeJS and the browser. And **r**epeat with Travis-CI.
 
 ![batr-logo](https://user-images.githubusercontent.com/236656/115827172-3757dd00-a40c-11eb-9687-70bb6e623d2b.png)
 
