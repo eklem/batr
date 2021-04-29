@@ -14,4 +14,4 @@ Bundle and test CommonJS + ESM in NodeJS and the browser. And repeat with Travis
 * Ava tests in Node.js
 * Possibly duplicat Ava tests in browser
 * User-like interaction tests in browser, supported by Ava
-* Bundling & building for the browser, CommonJS and ESM
+* Bundling & buildin  g for the browser, CommonJS and ESM
