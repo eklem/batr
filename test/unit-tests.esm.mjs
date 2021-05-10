@@ -1,5 +1,5 @@
-const sw = require('./stopword/dist/stopword.cjs.js')
-const test = require('ava').default
+import sw from './stopword/dist/stopword.esm.mjs'
+import test from 'ava'
 
 test('remove stopwords, default to english and preserve case', (t) => {
   const oldString = 'a really Interesting string with some words'.split(' ')

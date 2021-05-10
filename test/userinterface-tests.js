@@ -1,6 +1,6 @@
-const { firefox } = require('playwright')
+const { chromium } = require('playwright')
 const test = require('ava').default
-const browserPromise = firefox.launch({
+const browserPromise = chromium.launch({
   headless: true
 })
 const path = require('path')

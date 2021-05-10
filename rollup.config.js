@@ -10,11 +10,9 @@ export default [
   // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
     input: './node_modules/stopword/lib/stopword.js',
-    output: {
-      name: 'sw',
-      file: pkg.browser,
-      format: 'umd'
-    },
+    output: [
+      { name: 'sw', file: pkg.browser, format: 'umd' }
+    ],
     plugins: [
       resolve(), // so Rollup can find `ms`
       commonjs(), // so Rollup can convert `ms` to an ES module

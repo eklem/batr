@@ -2,14 +2,14 @@
   "name": "batr",
   "version": "0.1.0",
   "description": "Batr - Bundle and Test CommonJS + ESM in the browser and NodeJS. And repeat with Travis-CI.",
-  "main": "test/stopword/lib/stopword.cjs.js",
-  "module": "test/stopword/lib/stopword.esm.js",
+  "main": "test/stopword/dist/stopword.cjs.js",
+  "module": "test/stopword/dist/stopword.esm.mjs",
   "browser": "test/stopword/dist/stopword.js",
   "scripts": {
     "build": "rollup --config",
     "empty-sandbox": "rm -rf test/stopword/",
     "copy-stopword": "cp -r ./node_modules/stopword ./test",
-    "test": "npm run empty-sandbox && npm run copy-stopword && npm run build && npx ava ./test/unit-tests.js && npx ava ./test/userinterface-tests.js && npm run empty-sandbox"
+    "test": "npm run empty-sandbox && npm run copy-stopword && npm run build && npx ava ./test/unit-tests.js && npx ava ./test/unit-tests.esm.mjs && npx ava ./test/userinterface-tests.js"
   },
   "repository": {
     "type": "git",
