@@ -1,7 +1,7 @@
 # batr
 **B**undle **A**nd **T**est ... and **R**epeat
 
-Bundle and test CommonJS, ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.
+Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.
 
 ![batr-logo](https://user-images.githubusercontent.com/236656/115827172-3757dd00-a40c-11eb-9687-70bb6e623d2b.png)
 
