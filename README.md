@@ -10,7 +10,7 @@ Build, bundle and test CommonJS + ESM in the browser and NodeJS. And repeat with
 * Use less time on updating the same bundle and test framework code in different libraries.
 * Quicker bundling and test setup when creating new libraries.
 * As few dependencies as possible, or a good balance between dependencies and function, to not have minor updates all the time.
-* Less noise from Dependabot.
+* New NPM release every month, meaning less noise from Dependabot. Batr + dependencies will only be devDependencies, and security issues will not be a big problem.
 
 ### Easy setup of
 * Ava tests in Node.js
