@@ -1,7 +1,7 @@
 {
   "name": "batr",
   "version": "0.1.0",
-  "description": "Batr - Bundle and Test CommonJS + ESM in the browser and NodeJS. And repeat with Travis-CI.",
+  "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
   "main": "test/stopword/dist/stopword.cjs.js",
   "module": "test/stopword/dist/stopword.esm.mjs",
   "browser": "test/stopword/dist/stopword.js",
