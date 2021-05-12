@@ -28,11 +28,14 @@
     "stopword": "^1.0.7"
   },
   "keywords": [
-    "building",
-    "testing",
     "bundling",
+    "testing",
+    "continuous integration",
     "nodejs",
-    "browser"
+    "browser",
+    "commonjs,
+    "esm",
+    "umd"
   ],
   "author": "Espen Klem",
   "license": "MIT",
