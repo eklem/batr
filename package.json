@@ -1,6 +1,6 @@
 {
   "name": "batr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
   "main": "test/stopword/dist/stopword.cjs.js",
   "module": "test/stopword/dist/stopword.esm.mjs",
@@ -9,7 +9,7 @@
     "build": "rollup --config",
     "empty-sandbox": "rm -rf test/stopword/",
     "copy-stopword": "cp -r ./node_modules/stopword ./test",
-    "test": "npm run empty-sandbox && npm run copy-stopword && npm run build && npx ava ./test/unit-tests.js && npx ava ./test/unit-tests.esm.mjs && npx ava ./test/userinterface-tests.js"
+    "test": "standard './*.js' './test/*.js' && npm run empty-sandbox && npm run copy-stopword && npm run build && npx ava ./test/unit-tests.js && npx ava ./test/unit-tests.esm.mjs && npx ava ./test/userinterface-tests.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "continuous integration",
     "nodejs",
     "browser",
-    "commonjs,
+    "commonjs",
     "esm",
     "umd"
   ],
