@@ -7,7 +7,6 @@ import pkg from './package.json'
 
 export default [
   // browser-friendly UMD build
-  // *** This needs to be stopword.js and not vandelay-industries.js ***
   {
     input: './node_modules/stopword/lib/stopword.js',
     output: [
@@ -16,7 +15,7 @@ export default [
     plugins: [
       resolve(), // so Rollup can find `ms`
       commonjs(), // so Rollup can convert `ms` to an ES module
-      json()
+      json() // for Rollup to be able to read content from package.json
     ]
   },
 
