@@ -1,6 +1,6 @@
 {
   "name": "batr",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
   "main": "vandelay-industries.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "ava": "3.15.0",
     "playwright": "^1.11.1",
     "rollup": "^2.51.0",
-    "standard": "^16.0.2"
+    "standard": "^16.0.3"
   },
   "keywords": [
     "bundling",
