@@ -16,7 +16,7 @@
     "@rollup/plugin-node-resolve": "^13.0.4",
     "ava": "4.0.0-alpha.2",
     "playwright": "^1.14.0",
-    "rollup": "^2.56.0",
+    "rollup": "^2.56.2",
     "standard": "^16.0.3"
   },
   "keywords": [
