@@ -4,6 +4,9 @@
 ![batr-logo](https://user-images.githubusercontent.com/236656/115827172-3757dd00-a40c-11eb-9687-70bb6e623d2b.png)
 
 Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.
+
+I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test A first. Then test A and B after each other. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B. Then you do A, B and C and then A, B, C and D.
+
 ## Get started
 
 ### Add batr devDependency
