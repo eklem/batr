@@ -7,6 +7,12 @@ Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and
 
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test A first. Then test A and B after each other. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B. Then you do A, B and C and then A, B, C and D.
 
+## Libraries used:
+* [AvaJS](https://github.com/avajs/ava)
+* [Playwright](https://playwright.dev/docs/intro)
+* [Rollup](https://rollupjs.org/guide/en/) + plugins `@rollup/plugin-commonjs`, `@rollup/plugin-json` and `@rollup/plugin-node-resolve`
+* [StandardJS](https://standardjs.com/)
+
 ## Get started
 
 ### Add batr devDependency
