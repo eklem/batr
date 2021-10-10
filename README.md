@@ -55,8 +55,6 @@ Makes pointers to which files are used for what. Used i.e. when bundling correct
 #### Rollup config for bundling CJS, ESM and UMD
 
 ```javaScript
-// Something like this:
-
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
@@ -74,8 +72,8 @@ export default [
     input: './src/index.js',
     output: [
       { name: 'math', file: pkg.browser, format: 'umd', exports: 'named' },
-      { name: 'math', file: pkg.main, format: 'cjs', exports: 'named' },
-      { name: 'math', file: pkg.module, format: 'es', exports: 'named' }
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' }
     ],
     plugins: [
       resolve(), // so Rollup can find `ms`
