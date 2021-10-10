@@ -3,7 +3,7 @@
 
 ![batr-logo](https://user-images.githubusercontent.com/236656/115827172-3757dd00-a40c-11eb-9687-70bb6e623d2b.png)
 
-Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.
+Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, AvaJS and Playwright. And repeat with Travis-CI.
 
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test A first. Then test A and B after each other. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B. Then you do A, B and C and then A, B, C and D.
 
@@ -13,14 +13,20 @@ I'm using AvaJS since I want a simple enough test framework and don't want to be
 * [Rollup](https://rollupjs.org/guide/en/) + plugins `@rollup/plugin-commonjs`, `@rollup/plugin-json` and `@rollup/plugin-node-resolve`
 * [StandardJS](https://standardjs.com/)
 
+**Integrations**
+* [Travis-CI](https://travis-ci.com/) for continuous integration.
+
 ## Get started
 
 ### Add batr devDependency
+All the dependencies in one. Security updates and version bumps done mostly at the start of every month, so less GitHub dependabot noise.
+
 ```javaScript
   "devDependencies": {
-    "batr": "^1.0.4"
+    "batr": "^1.0.5"
   }
 ```
+The underlying libraries are used (required and imported) as normal.
 
 ### Define main, module and browser
 * `main` - CJS - CommonJS
@@ -118,28 +124,7 @@ Same tests as for `Main`, just using `import` instead of `require`.
 import test from 'ava'
 import math from '../dist/batr-example.esm.mjs'
 
-test('addition a + b', (t) => {
-  const expected = 31
-  const addition = math.add(7, 24)
-  t.deepEqual(addition, expected)
-})
-
-test('subtraction a - b', (t) => {
-  const expected = -17
-  const subtraction = math.subtract(7, 24)
-  t.deepEqual(subtraction, expected)
-})
-
-test('multiplication a * b', (t) => {
-  const expected = 168
-  const multiplication = math.multiply(7, 24)
-  t.deepEqual(multiplication, expected)
-})
-
-test('division a * b', (t) => {
-  const expected = 0.2916666666666667
-  const division = math.divide(7, 24)
-  t.deepEqual(division, expected)
+// Tests are identical to Main/CJS tests
 })
 ```
 
@@ -244,76 +229,7 @@ test('Subtract number 7 from 4', pageMacro, async (t, page) => {
   // await page.click('text=-3')
 })
 
-test('Multiply numbers 4 and 7', pageMacro, async (t, page) => {
-  const filePath = await path.resolve('./demo/index.html')
-  const url = 'file://' + filePath
-
-  // Go to ./index.html
-  await page.goto(url)
-
-  // Click input[type="number"]
-  await page.click('input[type="number"]')
-
-  // Fill input[type="number"]
-  await page.fill('input[type="number"]', '4')
-
-  // Press Tab
-  await page.press('input[type="number"]', 'Tab')
-
-  // Press Tab
-  await page.press('select[name="calculation"]', 'Tab')
-
-  // Fill #secondNumber
-  await page.fill('#secondNumber', '7')
-
-  // Press Tab with modifiers
-  await page.press('#secondNumber', 'Shift+Tab')
-
-  // Select multiply
-  await page.selectOption('select[name="calculation"]', 'multiply')
-
-  // screenshot, 3rd task
-  await page.screenshot({ path: './screenshots/screenshot-03.png' })
-
-  // Click text=28
-  t.deepEqual(await page.textContent('#result span'), '28')
-  // await page.click('text=28')
-})
-
-test('Divide number 4 by 7', pageMacro, async (t, page) => {
-  const filePath = await path.resolve('./demo/index.html')
-  const url = 'file://' + filePath
-
-  // Go to ./index.html
-  await page.goto(url)
-
-  // Click input[type="number"]
-  await page.click('#firstNumber')
-
-  // Fill input[type="number"]
-  await page.fill('#firstNumber', '4')
-
-  // Press Tab
-  await page.press('#firstNumber', 'Tab')
-
-  // Press Tab
-  await page.press('select[name="calculation"]', 'Tab')
-
-  // Fill #secondNumber
-  await page.fill('#secondNumber', '7')
-
-  // Press Tab with modifiers
-  await page.press('#secondNumber', 'Shift+Tab')
-
-  // Select divide
-  await page.selectOption('select[name="calculation"]', 'divide')
-
-  // screenshot, 4th task
-  await page.screenshot({ path: './screenshots/screenshot-04.png' })
-
-  // Click text=0.5714285714285714
-  t.deepEqual(await page.textContent('#result span'), '0.5714285714285714')
-  // await page.click('text=0.5714285714285714')
+// More test examples to be found at batr-example
 })
 ```
 
