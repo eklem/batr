@@ -15,7 +15,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "ava": "4.0.0-alpha.2",
-    "playwright": "^1.15.2",
+    "playwright": "^1.16.0",
     "rollup": "^2.58.0",
     "standard": "^16.0.4"
   },
