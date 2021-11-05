@@ -5,7 +5,7 @@
 
 Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, AvaJS and Playwright. And repeat with Travis-CI.
 
-I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test A first. Then test A and B after each other. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B. Then you do A, B and C and then A, B, C and D.
+I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test them all synchronously in one go. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B and so on.
 
 ## Libraries used:
 * [AvaJS](https://github.com/avajs/ava)
