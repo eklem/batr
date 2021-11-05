@@ -7,6 +7,9 @@ Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, A
 
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test them all synchronously in one go. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B and so on.
 
+## Example setup
+For an actual working example, check out [batr-example](http://github.com/eklem/batr-example) on how to use batr. It's an example library with minimal of functions and user-interface to show-case how to set up `batr`. The examples here are lifted from that library.
+
 ## Libraries used:
 * [AvaJS](https://github.com/avajs/ava)
 * [Playwright](https://playwright.dev/docs/intro)
@@ -247,5 +250,3 @@ before_script:
 * User-like interaction tests in browser, supported by Ava
 * Bundling & buildin  g for the browser, CommonJS and ESM
 
-## Howto set up
-For an actual working example, check out [batr-example](http://github.com/eklem/batr-example) on how to use batr. It's an example library with minimal of functions and user-interface to show-case how to set up `batr`. The examples here are lifted from that library.
