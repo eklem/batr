@@ -3,7 +3,7 @@
 
 ![batr-logo](https://user-images.githubusercontent.com/236656/115827172-3757dd00-a40c-11eb-9687-70bb6e623d2b.png)
 
-Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, AvaJS and Playwright. And repeat with Travis-CI.
+Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, AvaJS and Playwright. And repeat with GitHub Actions workflow.
 
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test them all synchronously in one go. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B and so on.
 
@@ -17,7 +17,7 @@ For an actual working example, check out [batr-example](http://github.com/eklem/
 * [StandardJS](https://standardjs.com/)
 
 **Integrations**
-* [Travis-CI](https://travis-ci.com/) for continuous integration.
+* Using [GitHub Actions workflow](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions) for continuous integration.
 
 ## Get started
 
@@ -137,7 +137,7 @@ npx playwright codegen -o javascript index.html
 
 [Playwright has good documentation on how to record](https://playwright.dev/docs/codegen#generate-tests) user interactions and generating test-code for different programming languages. I'm guessing it's good practice to swap some of the HTML references with a little more solid CSS selectors so that the tests won't fail becuase of small HTML changes.
 
-To see more of what's going on you can set `healess: false` and slow it down with `sloMo: 500`, but it will fail if you try it on i.e. Travis CI, since there it's running headless.
+To see more of what's going on you can set `healess: false` and slow it down with `sloMo: 500`, but it will fail if you try it on i.e. a server, since there it's running headless.
 
 Also, you can test with different browsers or more than one browser, and emulate devices like an Iphone.
 
@@ -221,21 +221,28 @@ test('Add numbers 4 and 7, subtract 7 from 4, multiply 4 and finally divide 4 by
 })
 ```
 
-#### Continuous integration with Travis-CI
-Linux is the cheapest to run your tests on, but you can test on OSX and Windows to.
-`.travis.yml`:
+#### Continuous integration with GitHub Actions workflow
+`ubuntu-latest` is easy going, but you can test OSX and Windows too. Check [GitHubs runs-on documentiation](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on).
+`.github/workflows/tests.yml`:
 ```yml
-language: node_js
-os: linux
-dist: xenial
-notifications:
-  email: true
-node_js:
-  - '12'
-  - '14'
-  - '16'
-before_script:
-  - npm prune
+name: tests
+on:
+  - push
+  - pull_request
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: sudo apt-get install xvfb
+      - run: xvfb-run --auto-servernum npm test
 ```
 
 ## Background and goal
