@@ -3,7 +3,9 @@ module.exports = {
   resolve: require('@rollup/plugin-node-resolve'),
   commonjs: require('@rollup/plugin-commonjs'),
   json: require('@rollup/plugin-json'),
-  ava: require('ava').default,
+  terser: require('rollup-plugin-terser'),
+  license: require('rollup-plugin-license'),
+  ava: require('ava'),
   playwright: require('playwright'),
   rollup: require('rollup'),
   standard: require('standard')
