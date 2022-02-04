@@ -5,7 +5,7 @@ module.exports = {
   json: require('@rollup/plugin-json'),
   terser: require('rollup-plugin-terser'),
   license: require('rollup-plugin-license'),
-  ava: require('ava'),
+  ava: require('ava').default,
   playwright: require('playwright'),
   rollup: require('rollup'),
   standard: require('standard')

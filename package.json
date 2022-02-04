@@ -1,6 +1,6 @@
 {
   "name": "batr",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
   "main": "vandelay-industries.js",
   "scripts": {
@@ -14,11 +14,11 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.3",
-    "rollup-plugin-license": "2.6.1",
-    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-license": "^2.6.1",
+    "rollup-plugin-terser": "^7.0.2",
     "ava": "4.0.1",
-    "playwright": "^1.18.1",
-    "rollup": "^2.67.0",
+    "playwright": "^1.18.0",
+    "rollup": "^2.66.1",
     "standard": "^16.0.4"
   },
   "keywords": [
