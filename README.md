@@ -7,6 +7,11 @@ Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, A
 
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test them all synchronously in one go. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B and so on.
 
+[![NPM version](http://img.shields.io/npm/v/batr.svg?style=flat)](https://npmjs.org/package/batr)
+[![NPM downloads](http://img.shields.io/npm/dm/batr.svg?style=flat)](https://npmjs.org/package/batr) 
+[![Build Status](https://github.com/eklem/batr/actions/workflows/tests.yml/badge.svg)](https://github.com/eklem/batr/actions/workflows/tests.yml) 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 ## Example setup
 For an actual working example, check out [batr-example](http://github.com/eklem/batr-example) on how to use batr. It's an example library with minimal of functions and user-interface to show-case how to set up `batr`. The examples here are lifted from that library.
 

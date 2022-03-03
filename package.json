@@ -1,10 +1,12 @@
 {
   "name": "batr",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
   "main": "vandelay-industries.js",
   "scripts": {
-    "test": "standard './*.js'"
+    "purge": "cd test && rm -rf * && rm -rf .github",
+    "copy-tests": "cp -r node_modules/batr-example/ ./test/",
+    "test": "standard './*.js' && npm run purge && npm run copy-tests &&  npx ava ./test/test/test.cjs.js && npx ava ./test/test/test.esm.mjs && npx ava ./test/test/ui-test.js && npm run purge"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,9 @@
     "playwright": "^1.19.2",
     "rollup": "^2.69.0",
     "standard": "^16.0.4"
+  },
+  "devDependencies": {
+    "batr-example": "^2.0.5"
   },
   "keywords": [
     "bundling",
