@@ -20,7 +20,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "ava": "4.1.0",
     "playwright": "^1.19.2",
-    "rollup": "^2.69.1",
+    "rollup": "^2.70.0",
     "standard": "^16.0.4"
   },
   "devDependencies": {
