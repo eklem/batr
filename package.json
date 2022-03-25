@@ -24,7 +24,7 @@
     "standard": "^16.0.4"
   },
   "devDependencies": {
-    "batr-example": "^2.0.5"
+    "batr-example": "^2.0.6"
   },
   "keywords": [
     "bundling",
