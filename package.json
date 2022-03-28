@@ -13,7 +13,7 @@
     "url": "git+https://github.com/eklem/batr.git"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "rollup-plugin-license": "^2.6.1",
