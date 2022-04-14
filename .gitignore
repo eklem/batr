@@ -1,3 +1,6 @@
+# OSX noise
+.DS_Store
+
 # Logs
 logs
 *.log
