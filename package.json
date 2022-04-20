@@ -21,7 +21,7 @@
     "ava": "4.2.0",
     "playwright": "^1.21.1",
     "rollup": "^2.70.2",
-    "standard": "^16.0.4"
+    "standard": "^17.0.0"
   },
   "devDependencies": {
     "batr-example": "^2.0.6"
