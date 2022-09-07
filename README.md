@@ -5,6 +5,8 @@
 
 Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with Rollup, AvaJS and Playwright. And repeat with GitHub Actions workflow.
 
+A little blogpost on why I thought Batr was a good idea: [Test setup for JavaScript/web development with less stress and pain— My solution so far: Batr](https://blogg.knowit.no/solutions-no/test-setup-for-javascript/web-development-with-less-stress-and-pain-my-solution-so-far-batr).
+
 I'm using AvaJS since I want a simple enough test framework and don't want to be too smart about assertions. The needs are not that big. For UI tests it's good to be a little repetitive. If you want to test a sequence of interactions A, B, C and D, then test them all synchronously in one go. You'll get to test the transition between the interactions and that the result of interaction A, doesn't screw up interaction B and so on.
 
 [![NPM version](http://img.shields.io/npm/v/batr.svg?style=flat)](https://npmjs.org/package/batr)
