@@ -6,7 +6,8 @@
   "scripts": {
     "purge": "cd test && rm -rf * && rm -rf .github",
     "copy-tests": "cp -r ./node_modules/batr-example/ ./test/",
-    "test": "standard './*.js' && npm run copy-tests &&  npx ava ./test/test/test.cjs.js && npx ava ./test/test/test.esm.mjs && npx ava ./test/test/ui-test.js && npm run purge"
+    "playwright-init": "npx playwright install",
+    "test": "standard './*.js' && npm run playwright-init && npm run copy-tests &&  npx ava ./test/test/test.cjs.js && npx ava ./test/test/test.esm.mjs && npx ava ./test/test/ui-test.js && npm run purge"
   },
   "repository": {
     "type": "git",
