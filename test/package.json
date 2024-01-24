@@ -1,0 +1,34 @@
+{
+  "name": "batr-example",
+  "version": "2.0.7",
+  "description": "Example / Test repository for batr - Bundle And Test and Repeat. ",
+  "main": "./dist/batr-example.cjs.js",
+  "module": "./dist/batr-example.esm.mjs",
+  "browser": "./dist/batr-example.umd.js",
+  "scripts": {
+    "build": "rollup --config",
+    "test": "standard './*.js' && npm run build  && npx ava ./test/test.cjs.js && npx ava ./test/test.esm.mjs && npx ava ./test/ui-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eklem/batr-example.git"
+  },
+  "devDependencies": {
+    "batr": "^2.1.9"
+  },
+  "keywords": [
+    "bundle",
+    "test",
+    "continuous-integration",
+    "UI-testing"
+  ],
+  "author": "Espen Klem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eklem/batr-example/issues"
+  },
+  "homepage": "https://github.com/eklem/batr-example#readme",
+  "directories": {
+    "test": "test"
+  }
+}
