@@ -1,7 +1,7 @@
 const { chromium } = require('playwright')
 const test = require('ava')
 const browserPromise = chromium.launch({
-  headless: false
+  headless: true
   // slowMo: 350
 })
 
@@ -18,8 +18,9 @@ async function pageMacro (t, callback) {
 }
 
 test('Add numbers 4 and 7, subtract 7 from 4, multiply 4 and finally divide 4 by 7', pageMacro, async (t, page) => {
-  // t.plan(4)
-  t.timeout(60000)
+  t.plan(4)
+  t.timeout(30000)
+
   const filePath = await path.resolve(__dirname, '../demo/index.html')
   const url = 'file://' + filePath
 
