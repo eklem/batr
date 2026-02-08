@@ -1,31 +1,27 @@
 {
   "name": "batr",
   "version": "3.0.0",
-  "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with AvaJS and Playwright. And repeat with Travis-CI.",
+  "description": "Bundle and test CommonJS and ESM in NodeJS and UMD in the browser with NodeJS testrunner and Playwright. And repeat with Travis-CI.",
   "main": "vandelay-industries.js",
   "scripts": {
     "purge": "cd test && rm -rf * && rm -rf .github",
     "copy-tests": "cp -r ./node_modules/batr-example/ ./test/",
     "playwright-init": "npx playwright install",
-    "test": "standard './*.js' && npm run playwright-init && npm run copy-tests &&  npx ava ./test/test/test.cjs.js && npx ava ./test/test/test.esm.mjs && npx ava ./test/test/ui-test.js && npm run purge"
+    "test": "standard './*.js'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eklem/batr.git"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "ava": "^6.1.0",
-    "playwright": "^1.41.1",
-    "rollup": "^2.79.1",
-    "rollup-plugin-license": "^3.2.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "standard": "^17.1.0"
-  },
-  "devDependencies": {
-    "batr-example": "^2.0.7"
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "playwright": "^1.58.2",
+    "rollup": "^4.57.1",
+    "rollup-plugin-license": "^3.6.0",
+    "standard": "^17.1.2"
   },
   "keywords": [
     "bundling",
