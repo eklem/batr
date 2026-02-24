@@ -16,7 +16,7 @@
   "dependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "ava": "^6.1.2",
     "playwright": "^1.55.1",
     "rollup": "^2.79.1",
