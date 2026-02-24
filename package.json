@@ -20,7 +20,7 @@
     "ava": "^6.4.1",
     "playwright": "^1.55.1",
     "rollup": "^2.80.0",
-    "rollup-plugin-license": "^3.3.1",
+    "rollup-plugin-license": "^3.7.0",
     "rollup-plugin-terser": "^7.0.2",
     "standard": "^17.1.0"
   },
