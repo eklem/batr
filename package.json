@@ -22,7 +22,7 @@
     "rollup": "^2.80.0",
     "rollup-plugin-license": "^3.7.0",
     "rollup-plugin-terser": "^7.0.2",
-    "standard": "^17.1.0"
+    "standard": "^17.1.2"
   },
   "devDependencies": {
     "batr-example": "^2.0.7"
