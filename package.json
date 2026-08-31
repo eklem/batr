@@ -19,7 +19,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "ava": "^8.0.1",
     "playwright": "^1.62.1",
-    "rollup": "^4.63.0",
+    "rollup": "^4.63.1",
     "rollup-plugin-license": "^3.7.1",
     "rollup-plugin-terser": "^7.0.2",
     "standard": "^17.1.2"
